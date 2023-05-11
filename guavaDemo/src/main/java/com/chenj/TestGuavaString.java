@@ -39,8 +39,6 @@ public class TestGuavaString {
         String joinStr = Joiner.on(",").withKeyValueSeparator(":").join(maps);
 
         System.out.println(joinStr);
-
-
     }
 
     @Test
