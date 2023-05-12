@@ -34,8 +34,6 @@ public class DemoGuavaCache {
                 //build方法中可以指定CacheLoader，在缓存不存在时通过CacheLoader的实现自动加载缓存
                 .build(new DemoCacheLoader());
 
-
-
         //模拟线程并发
         new Thread(() -> {
             //非线程安全的时间格式化工具
@@ -61,12 +59,6 @@ public class DemoGuavaCache {
             } catch (Exception ignored) {
             }
         }).start();
-
-
-
-
-
-
     }
 
     /**

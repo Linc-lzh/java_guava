@@ -53,7 +53,6 @@ public class TestGuavaString {
         for (String str : stringList) {
             System.out.println("str:"+str);
         }
-
     }
 
     /**
@@ -87,7 +86,6 @@ public class TestGuavaString {
         System.out.println(CharMatcher.breakingWhitespace().trimTrailingFrom("     Ting Feng     "));   //      Ting Feng
     }
 
-
     /**
      * is 匹配参数之内的所有字符
      * isNot 匹配参数之外的所有字符
@@ -101,7 +99,6 @@ public class TestGuavaString {
 //        System.out.println(CharMatcher.isNot(',').retainFrom(input));   // a c z 1 2
 //        System.out.println(CharMatcher.isNot(',').removeFrom(input));   // ,,,,
     }
-
 
     /**
      * matchesAllOf 判断sequence所有字符是否都被charMatcher匹配
@@ -122,7 +119,6 @@ public class TestGuavaString {
         System.out.println(matcher.matchesNoneOf(input));   // true
     }
 
-
     /**
      * 匹配任意字符
      */
@@ -138,8 +134,4 @@ public class TestGuavaString {
         System.out.println(matcher.retainFrom(input)); // Hell
         System.out.println(matcher.removeFrom(input)); // *.o,}12
     }
-
-
-
-
 }

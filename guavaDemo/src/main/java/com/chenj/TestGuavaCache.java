@@ -30,13 +30,10 @@ public class TestGuavaCache {
         String key1 = loadingCache.get("key1");
         System.out.println("key1:"+key1);
 
-
         System.out.println("------------------");
         loadingCache.put("key2","value2");
         String key2 = loadingCache.get("key2");
         System.out.println("key2:"+key2);
-
-
     }
 
     @Test
@@ -55,11 +52,7 @@ public class TestGuavaCache {
             }
         });
         System.out.println("key1:"+value1);
-
-
     }
-
-
 
     /**
      * 初始化缓存
@@ -84,7 +77,6 @@ public class TestGuavaCache {
             System.out.println(its.next().toString());
         }
     }
-
 
     @Test
     public void testClear1() throws ExecutionException {
@@ -111,11 +103,7 @@ public class TestGuavaCache {
         System.out.println("------------------");
         loadingCache.get("4");//往里面添加一个元素
         displayCache(loadingCache);
-
-
-
     }
-
 
     @Test
     public void testClear2() throws ExecutionException, InterruptedException {
@@ -153,10 +141,7 @@ public class TestGuavaCache {
         Thread.sleep(1100);
         System.out.println("=============================");
         displayCache(loadingCache);//没有数据了
-
-
     }
-
 
     /**
      * 测试缓存清除策略3：基于引用的删除
@@ -186,9 +171,7 @@ public class TestGuavaCache {
         // 强制垃圾回收
         System.gc();
         System.out.println(cache.getIfPresent("1"));
-
     }
-
 
     @Test
     public void test4(){
@@ -223,10 +206,9 @@ public class TestGuavaCache {
         cache.put("guava3","guava1");
         cache.put("guava4","guava1");
 
-        //cache.put("guava5","guava1");//第5个时候删除
+        cache.put("guava5","guava1");//第5个时候删除
 
         System.out.println(cache.stats().toString());
         System.out.println("-----------主程序end-------------");
-
     }
 }

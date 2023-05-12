@@ -64,10 +64,7 @@ public class TestGuavaCollection {
         hashMultimap.put("age",34);
 
         System.out.println(hashMultimap);
-
-
     }
-
 
     @Test
     public void test3(){
@@ -92,7 +89,6 @@ public class TestGuavaCollection {
         System.out.println(hashBiMap.get("JACK"));
 
         System.out.println(hashBiMap.inverse().inverse()==hashBiMap);
-
     }
 
 
@@ -101,7 +97,6 @@ public class TestGuavaCollection {
         //List<String> list = Lists.asList("1", new String[]{"2", "aaa"});
         ArrayList<String> list = Lists.newArrayList("aaa", "bbb", "ccc");
         System.out.println(list);
-
     }
 
     @Test
@@ -132,7 +127,6 @@ public class TestGuavaCollection {
         //将list按大小为2分隔成多个list
         List<List<String>> splitList = Lists.partition(list,2);
         System.out.println(splitList);
-
     }
 
     @Test
@@ -167,7 +161,6 @@ public class TestGuavaCollection {
         System.out.println(list1);
     }
 
-
     @Test
     public void combinationsTest(){
         //将集合中的元素按指定的大小分隔，指定大小的所有组合
@@ -177,7 +170,6 @@ public class TestGuavaCollection {
             System.out.println(set);
         }
     }
-
 
     @Test
     public void differenceTest(){
@@ -197,7 +189,6 @@ public class TestGuavaCollection {
         }
     }
 
-
     @Test
     public void asMapTest(){
         Set<String> set = Sets.newHashSet("a","b","c");
@@ -205,7 +196,6 @@ public class TestGuavaCollection {
         Map<String,Integer> map = Maps.asMap(set,String::length);
         System.out.println(map);
     }
-
 
     @Test
     public void filterEntriesTest(){
@@ -218,7 +208,6 @@ public class TestGuavaCollection {
 
     }
 
-
     @Test
     public void transFormEntriesTest(){
         Map<String,String> map1 = Maps.newHashMap();
@@ -228,7 +217,6 @@ public class TestGuavaCollection {
         Map<String,String> result = Maps.transformEntries(map1,(k,v) -> k + v);
         System.out.println(result);
     }
-
 
     @Test
     public void test5(){
@@ -244,7 +232,6 @@ public class TestGuavaCollection {
         // [1, 2, 3, 4]
         System.out.println(unmodifiableList);
     }
-
 
     @Test
     public void test6(){
@@ -262,10 +249,4 @@ public class TestGuavaCollection {
         // [1, 2, 3, 4]
         System.out.println("immutableList:"+immutableList);
     }
-
-
-
-
-
-
 }
